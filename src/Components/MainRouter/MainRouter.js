@@ -5,6 +5,7 @@ import {
   Redirect
 } from "react-router-dom";
 import PokeDexHome from "../PokeDexHome/PokeDexHome";
+import SinglePokomon from "../SinglePokomon/SinglePokomon";
 
 const MainRouter = () => {
   return (
@@ -14,9 +15,9 @@ const MainRouter = () => {
           <PokeDexHome />
         </Route>
 
-        {/* <ProtectedRoute path="/dashboard/:key?">
-          <Dashboard></Dashboard>
-        </ProtectedRoute> */}
+        <Route path="/:key?">
+          <SinglePokomon></SinglePokomon>
+        </Route>
 
         <Route path="*">
           <Redirect to="/" />
